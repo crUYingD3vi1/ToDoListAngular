@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="input-group mb-3" style="padding: 30px; background-color: brown">
+    <input type="text" class="form-control" [(ngModel)]="InputText" placeholder="Введите дело" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <button class="btn btn-success" (click)="ListAdd()">Добваить ваше дело</button>
+  </div>
+  <app-body-component
+  *ngFor="let ItemTasks of Items"
+  [Items]="ItemTasks">
+  </app-body-component>
+</div>
